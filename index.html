@@ -522,5 +522,46 @@ target="_blank">
   </div>
 
 </footer>
+<script>
+// Скрытие шапки при скролле вниз и появление при скролле вверх
+(function() {
+  const header = document.querySelector('.topbar');
+  if (!header) return;
+  
+  let lastScroll = 0;
+  let scrollTimer = null;
+  const SCROLL_THRESHOLD = 50; // Минимальный скролл для срабатывания (пикселей)
+  
+  window.addEventListener('scroll', function() {
+    const currentScroll = window.pageYOffset;
+    
+    // Не применяем эффект на самом верху страницы
+    if (currentScroll <= 10) {
+      header.classList.remove('hide');
+      return;
+    }
+    
+    // Прокрутка вниз (больше чем вверх)
+    if (currentScroll > lastScroll && currentScroll > SCROLL_THRESHOLD) {
+      // Скроллим вниз - скрываем шапку
+      header.classList.add('hide');
+    } 
+    // Прокрутка вверх
+    else if (currentScroll < lastScroll) {
+      // Скроллим вверх - показываем шапку
+      header.classList.remove('hide');
+    }
+    
+    lastScroll = currentScroll;
+  });
+  
+  // При наведении мыши на верхнюю часть экрана показываем шапку (для десктопа)
+  document.addEventListener('mousemove', function(e) {
+    if (e.clientY < 50) {
+      header.classList.remove('hide');
+    }
+  });
+})();
+</script>
 </body>
 </html>
