@@ -982,3 +982,477 @@ MOBILE
 }
 
 }
+/* ==================================================
+   АДАПТИВНЫЙ CSS ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ
+   Добавьте этот код в конец файла style.css
+   ================================================== */
+
+/* Планшеты (768px - 1023px) */
+@media (max-width: 1023px) {
+  .container {
+    width: calc(100% - 48px);
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: -1.5px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .section-head h2,
+  .dark-head h2,
+  .advantages-left h2 {
+    font-size: 42px;
+  }
+
+  .services-grid,
+  .steps-grid,
+  .prices-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cta-box {
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    padding: 50px;
+  }
+
+  .cta-phone {
+    font-size: 36px;
+  }
+}
+
+/* Мобильные (до 767px) */
+@media (max-width: 767px) {
+  /* общие отступы */
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  /* --- шапка --- */
+  .topbar-inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .logo-img {
+    height: 48px;
+  }
+
+  .nav {
+    display: none; /* скрываем навигацию на мобиле — можно заменить на бургер, но оставляем как есть */
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tg-btn, .wa-btn {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 13px;
+    border-radius: 40px;
+  }
+
+  .phone {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  /* --- герой --- */
+  .hero {
+    padding-top: 110px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  .hero-badge {
+    font-size: 12px;
+    padding: 8px 14px;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .hero-feature {
+    min-width: auto;
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .hero-feature span {
+    font-size: 15px;
+  }
+
+  .hero-feature small {
+    font-size: 12px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .btn-primary, .btn-secondary {
+    height: 56px;
+    width: 100%;
+    font-size: 15px;
+    border-radius: 40px;
+  }
+
+  .hero-tags {
+    gap: 10px;
+  }
+
+  .hero-tag {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  /* --- секции общие --- */
+  .section-head {
+    margin-bottom: 40px;
+  }
+
+  .section-head h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .section-head p {
+    font-size: 15px;
+    padding: 0 8px;
+  }
+
+  .section-badge {
+    font-size: 11px;
+    padding: 6px 14px;
+  }
+
+  /* --- сетки (все в 1 колонку) --- */
+  .services-grid,
+  .steps-grid,
+  .prices-grid,
+  .cars-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* --- карточки услуг --- */
+  .service-card,
+  .step-card,
+  .price-card,
+  .car-card {
+    padding: 24px;
+    border-radius: var(--mobile-radius);
+  }
+
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+    border-radius: 18px;
+    margin-bottom: 18px;
+  }
+
+  .service-card h3,
+  .step-card h3,
+  .price-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .service-card p,
+  .step-card p {
+    font-size: 14px;
+  }
+
+  .price-card span {
+    font-size: 26px;
+    margin-top: 16px;
+  }
+
+  /* --- преимущества (спец блок) --- */
+  .advantages-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .advantages-left h2 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .advantages-left p {
+    font-size: 15px;
+    margin-bottom: 28px;
+  }
+
+  .adv-list {
+    gap: 14px;
+  }
+
+  .adv-item {
+    font-size: 15px;
+    gap: 12px;
+  }
+
+  .adv-check {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .stats-card {
+    padding: 32px;
+    border-radius: 28px;
+  }
+
+  .stat-num {
+    font-size: 44px;
+  }
+
+  .stat-text {
+    font-size: 14px;
+  }
+
+  /* --- темная секция (шаги) --- */
+  .dark-head {
+    margin-bottom: 40px;
+  }
+
+  .dark-head h2 {
+    font-size: 32px;
+  }
+
+  .step-num {
+    font-size: 38px;
+    margin-bottom: 12px;
+  }
+
+  /* --- CTA блок --- */
+  .cta-box {
+    grid-template-columns: 1fr;
+    padding: 28px;
+    border-radius: 32px;
+    gap: 32px;
+  }
+
+  .cta-left h2 {
+    font-size: 32px;
+    margin: 16px 0 20px;
+  }
+
+  .cta-phone {
+    font-size: 28px;
+    word-break: break-word;
+    display: inline-block;
+  }
+
+  .cta-form {
+    padding: 28px;
+    border-radius: 28px;
+  }
+
+  .cta-form h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .cta-form input,
+  .cta-form button {
+    height: 54px;
+    font-size: 15px;
+    border-radius: 40px;
+  }
+
+  .cta-form p {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  /* --- цены (карточки) --- */
+  .prices-section {
+    padding: 60px 0;
+  }
+
+  /* --- автопарк --- */
+  .car-card img {
+    height: 220px;
+  }
+
+  .car-content {
+    padding: 22px;
+  }
+
+  .car-content h3 {
+    font-size: 24px;
+  }
+
+  .car-content span {
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  /* --- подвал --- */
+  .footer-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 32px 0;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer a {
+    font-size: 20px;
+  }
+
+  /* --- плавающая кнопка WhatsApp --- */
+  .floating-wa {
+    width: 56px;
+    height: 56px;
+    right: 16px;
+    bottom: 16px;
+    font-size: 28px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+}
+
+/* ОЧЕНЬ маленькие телефоны (≤ 480px) */
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 24px);
+  }
+
+  section {
+    padding: 55px 0;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .section-head h2,
+  .advantages-left h2,
+  .dark-head h2,
+  .cta-left h2 {
+    font-size: 28px;
+  }
+
+  .service-card,
+  .step-card,
+  .price-card {
+    padding: 20px;
+  }
+
+  .cta-phone {
+    font-size: 24px;
+  }
+
+  .stats-card {
+    padding: 24px;
+  }
+
+  .stat-num {
+    font-size: 38px;
+  }
+
+  .topbar-inner {
+    gap: 10px;
+  }
+
+  .tg-btn, .wa-btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* Улучшение читаемости и отзывчивости для тач */
+@media (hover: none) and (pointer: coarse) {
+  .btn-primary, 
+  .btn-secondary,
+  .tg-btn,
+  .wa-btn,
+  .cta-form button,
+  .floating-wa {
+    cursor: default;
+  }
+
+  .service-card:hover,
+  .step-card:hover,
+  .price-card:hover,
+  .car-card:hover {
+    transform: none;
+  }
+}
+
+/* Альбомная ориентация на мобильных (до 850px и высота меньше 500px) */
+@media (max-width: 850px) and (max-height: 550px) and (orientation: landscape) {
+  .hero {
+    padding-top: 100px;
+    min-height: auto;
+  }
+  
+  .hero-content {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  
+  .hero h1 {
+    font-size: 32px;
+  }
+  
+  section {
+    padding: 50px 0;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
